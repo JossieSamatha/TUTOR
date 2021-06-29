@@ -14,4 +14,8 @@ public interface OrderPOMapper {
 
     })
     Order fromOrderPO(OrderPO orderPO);
+    @Mappings({
+
+    })
+    OrderPO fromOrder(Order orderPO);
 }

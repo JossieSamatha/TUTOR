@@ -10,4 +10,7 @@ public class OrderPOAssember {
     public Order fromOrderPO(OrderPO orderPO){
         return OrderPOMapper.INSTANCE.fromOrderPO(orderPO);
     }
+    public OrderPO fromOrder(Order order){
+        return OrderPOMapper.INSTANCE.fromOrder(order);
+    }
 }

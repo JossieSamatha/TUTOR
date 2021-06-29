@@ -4,6 +4,8 @@ import com.example.jwt.application.api.service.OrderAppService;
 import com.example.jwt.domain.entity.Order;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -22,6 +24,10 @@ public class SellApi {
     @GetMapping
     public Order queryOrder(@RequestParam String pkId){
         return orderAppService.queryOrder(pkId);
+    }
+    @PostMapping("/v1/remind/msg/query")
+    public void addOrder(@RequestBody Order order){
+         orderAppService.addOrder(order);
     }
 
 }

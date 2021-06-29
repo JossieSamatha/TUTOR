@@ -12,4 +12,7 @@ public class OrderAppService {
     public Order queryOrder(String pkId){
         return orderService.queryOrder(pkId);
     }
+    public void addOrder(Order pkId){
+         orderService.addOrder(pkId);
+    }
 }

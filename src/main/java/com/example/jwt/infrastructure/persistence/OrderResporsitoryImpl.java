@@ -17,4 +17,8 @@ public class OrderResporsitoryImpl implements OrderRespository  {
     public Order queryOrder(String pkId) {
         return orderPOAssember.fromOrderPO(orderMapper.selectById(pkId));
     }
+    @Override
+    public void addOrder(Order pkId) {
+        orderMapper.insert(orderPOAssember.fromOrder(pkId));
+    }
 }

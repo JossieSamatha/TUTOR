@@ -4,7 +4,6 @@ spring:
     username: root
     #检查密码是否正确
     password: root
-
 #SpringBoot整合MybatisPlus配置
 mybatis-plus:
   #定义别名包
@@ -18,4 +17,5 @@ mybatis-plus:
 logging:
   level:
     com.jt.mapper: debug
-
+server:
+  port: 9000
