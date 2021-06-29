@@ -17,7 +17,8 @@ public class OrderService {
         return orderRespository.queryOrder(pkId);
     }
     public void addOrder(Order order){
-        order.setKey(UUID.randomUUID().toString());
+//        order.setId(UUID.randomUUID().toString());
+//        order.setKey(UUID.randomUUID().toString());
         order.setCrtTs(new Date());
         orderRespository.addOrder(order);
     }
