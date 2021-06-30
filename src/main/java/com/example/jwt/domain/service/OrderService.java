@@ -7,14 +7,15 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.Date;
+import java.util.List;
 import java.util.UUID;
 
 @Service
 public class OrderService {
     @Autowired
     private OrderRespository orderRespository;
-    public Order queryOrder(String pkId){
-        return orderRespository.queryOrder(pkId);
+    public List<Order> queryOrderList(){
+        return orderRespository.queryOrderList();
     }
     public void addOrder(Order order){
 //        order.setId(UUID.randomUUID().toString());

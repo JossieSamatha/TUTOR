@@ -7,6 +7,9 @@ import com.example.jwt.infrastructure.persistence.po.OrderPO;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mappings;
 import org.mapstruct.factory.Mappers;
+
+import java.util.List;
+
 @Mapper
 public interface OrderPOMapper {
     OrderPOMapper INSTANCE= Mappers.getMapper(OrderPOMapper.class);
@@ -14,6 +17,10 @@ public interface OrderPOMapper {
 
     })
     Order fromOrderPO(OrderPO orderPO);
+    @Mappings({
+
+    })
+    List<Order> fromOrderPOList(List<OrderPO> orderPO);
     @Mappings({
 
     })

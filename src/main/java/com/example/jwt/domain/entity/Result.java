@@ -1,5 +1,10 @@
 package com.example.jwt.domain.entity;
 
-public class Result {
+import lombok.Data;
+
+@Data
+public final class Result<T> {
+    private T data;
+
 
 }
